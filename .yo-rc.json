@@ -1,0 +1,25 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "image-editor-webpart",
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "ImageEditor",
+    "componentDescription": "Image editor web part with CSS filter controls",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "image-editor-webpart",
+    "libraryId": "dc00c2e2-2322-4fe2-b4f1-5fabcbae9622",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionShortDescription": "image-editor-webpart description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  }
+}
