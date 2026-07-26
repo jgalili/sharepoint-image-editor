@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="1240" viewBox="0 0 1160 1240" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8886"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0078d4"/>
+    </marker>
+    <linearGradient id="swatch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5b9bd5"/>
+      <stop offset="50%" stop-color="#a8c4e4"/>
+      <stop offset="100%" stop-color="#e8c07d"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .band      { fill:#fbfbfa; stroke:#e6e4e2; rx:14; }
+      .bandTitle { font-size:15px; font-weight:700; fill:#8a8886; letter-spacing:1.6px; }
+      .bandSub   { font-size:13px; fill:#a19f9d; }
+      .box       { rx:8; filter:url(#soft); }
+      .spBox     { fill:#eef4fb; stroke:#a8c4e4; }
+      .codeBox   { fill:#f6f2fb; stroke:#c9b6e0; }
+      .outBox    { fill:#f3f7f2; stroke:#b3d0b6; }
+      .h         { font-size:16px; font-weight:600; fill:#201f1e; }
+      .t         { font-size:13px; fill:#484644; }
+      .s         { font-size:12px; fill:#605e5c; }
+      .mono      { font-family:Consolas, Menlo, monospace; font-size:12.5px; fill:#3b3a39; }
+      .monoKey   { font-family:Consolas, Menlo, monospace; font-size:12.5px; fill:#8250df; font-weight:600; }
+      .edge      { stroke:#8a8886; stroke-width:1.8; fill:none; marker-end:url(#arrow); }
+      .edgeBlue  { stroke:#0078d4; stroke-width:2; fill:none; marker-end:url(#arrowBlue); }
+      .edgeLabel { font-size:11.5px; fill:#605e5c; }
+      .pill      { rx:11; fill:#ffffff; stroke:#d2d0ce; }
+      .pillText  { font-size:12px; fill:#323130; }
+    </style>
+  </defs>
+
+  <rect width="1160" height="1240" fill="#ffffff"/>
+
+  <text x="40" y="46" font-size="24" font-weight="700" fill="#201f1e">Image Editor — how a setting becomes a pixel</text>
+  <text x="40" y="72" font-size="14" fill="#605e5c">Everything happens in the browser. No server, no upload, no copy of your image is ever made.</text>
+
+  <!-- ============ BAND 1 : CONFIGURE ============ -->
+  <rect class="band" x="30" y="100" width="1100" height="330"/>
+  <text class="bandTitle" x="54" y="130">1 · CONFIGURE</text>
+  <text class="bandSub" x="190" y="130">an author edits the page and opens the property pane</text>
+
+  <!-- property pane -->
+  <rect class="box spBox" x="54" y="150" width="330" height="256"/>
+  <text class="h" x="74" y="178">Property pane</text>
+  <text class="s" x="74" y="197">5 groups, 12 settings</text>
+
+  <rect class="pill" x="74" y="210" width="290" height="30"/>
+  <text class="pillText" x="86" y="230">📷  Image Source — <tspan font-family="Consolas, Menlo, monospace">imageUrl</tspan></text>
+
+  <rect class="pill" x="74" y="246" width="290" height="30"/>
+  <text class="pillText" x="86" y="266">☀  Light &amp; Exposure — 3 sliders</text>
+
+  <rect class="pill" x="74" y="282" width="290" height="30"/>
+  <text class="pillText" x="86" y="302">🎨  Colour — 5 sliders</text>
+
+  <rect class="pill" x="74" y="318" width="290" height="30"/>
+  <text class="pillText" x="86" y="338">✨  Effects — 3 sliders</text>
+
+  <rect class="pill" x="74" y="354" width="290" height="30"/>
+  <text class="pillText" x="86" y="374">↺  Reset All Effects — one button</text>
+
+  <!-- arrow -->
+  <path class="edgeBlue" d="M394,278 L474,278"/>
+  <text class="edgeLabel" x="398" y="268">writes</text>
+
+  <!-- properties store -->
+  <rect class="box spBox" x="484" y="150" width="300" height="256"/>
+  <text class="h" x="504" y="178">this.properties</text>
+  <text class="s" x="504" y="197">saved with the page, per web part instance</text>
+
+  <text class="mono" x="504" y="224">imageUrl    <tspan class="monoKey">""</tspan></text>
+  <text class="mono" x="504" y="244">brightness  <tspan class="monoKey">100</tspan>   contrast <tspan class="monoKey">100</tspan></text>
+  <text class="mono" x="504" y="264">saturate    <tspan class="monoKey">100</tspan>   hueRotate <tspan class="monoKey">0</tspan></text>
+  <text class="mono" x="504" y="284">blur          <tspan class="monoKey">0</tspan>   grayscale <tspan class="monoKey">0</tspan></text>
+  <text class="mono" x="504" y="304">sepia         <tspan class="monoKey">0</tspan>   invert    <tspan class="monoKey">0</tspan></text>
+  <text class="mono" x="504" y="324">opacity     <tspan class="monoKey">100</tspan>   shadow    <tspan class="monoKey">0</tspan></text>
+  <text class="mono" x="504" y="344">borderRadius  <tspan class="monoKey">0</tspan></text>
+  <text class="s" x="504" y="374">Each slider change triggers a re-render, so the</text>
+  <text class="s" x="504" y="390">page updates while you drag it.</text>
+
+  <!-- arrow -->
+  <path class="edgeBlue" d="M794,278 L874,278"/>
+  <text class="edgeLabel" x="796" y="268">as props</text>
+
+  <!-- react component -->
+  <rect class="box spBox" x="884" y="150" width="222" height="256"/>
+  <text class="h" x="904" y="178">ImageEditor.tsx</text>
+  <text class="s" x="904" y="197">a React component with</text>
+  <text class="s" x="904" y="213">no state of its own</text>
+
+  <rect class="pill" x="904" y="232" width="182" height="28"/>
+  <text class="pillText" x="916" y="251">reads 12 props</text>
+  <rect class="pill" x="904" y="266" width="182" height="28"/>
+  <text class="pillText" x="916" y="285">builds one style object</text>
+  <rect class="pill" x="904" y="300" width="182" height="28"/>
+  <text class="pillText" x="916" y="319">renders one &lt;img&gt;</text>
+
+  <text class="s" x="904" y="352">In edit mode it also shows</text>
+  <text class="s" x="904" y="368">a URL box above the image,</text>
+  <text class="s" x="904" y="384">so you can paste and see.</text>
+
+  <!-- ============ BAND 2 : TRANSLATE ============ -->
+  <rect class="band" x="30" y="452" width="1100" height="382"/>
+  <text class="bandTitle" x="54" y="482">2 · TRANSLATE</text>
+  <text class="bandSub" x="200" y="482">numbers become one CSS declaration — this is the whole engine</text>
+
+  <rect class="box codeBox" x="54" y="502" width="520" height="312"/>
+  <text class="h" x="74" y="530">Eight of them join into a filter chain</text>
+
+  <text class="mono" x="74" y="558">filter: brightness(<tspan class="monoKey">n</tspan>/100)</text>
+  <text class="mono" x="74" y="578">        contrast(<tspan class="monoKey">n</tspan>/100)</text>
+  <text class="mono" x="74" y="598">        saturate(<tspan class="monoKey">n</tspan>/100)</text>
+  <text class="mono" x="74" y="618">        hue-rotate(<tspan class="monoKey">n</tspan>deg)</text>
+  <text class="mono" x="74" y="638">        blur(<tspan class="monoKey">n</tspan>px)</text>
+  <text class="mono" x="74" y="658">        grayscale(<tspan class="monoKey">n</tspan>/100)</text>
+  <text class="mono" x="74" y="678">        sepia(<tspan class="monoKey">n</tspan>/100)</text>
+  <text class="mono" x="74" y="698">        invert(<tspan class="monoKey">n</tspan>/100);</text>
+
+  <text class="s" x="74" y="730">Order matters. The browser applies them left to right,</text>
+  <text class="s" x="74" y="748">so blurring before inverting is not the same picture as</text>
+  <text class="s" x="74" y="766">inverting before blurring. This order was chosen so the</text>
+  <text class="s" x="74" y="784">sliders behave the way a photo app's would.</text>
+
+  <rect class="box codeBox" x="596" y="502" width="510" height="312"/>
+  <text class="h" x="616" y="530">The other four are plain properties</text>
+
+  <text class="mono" x="616" y="558">opacity:       <tspan class="monoKey">n</tspan>/100</text>
+  <text class="mono" x="616" y="586">border-radius: <tspan class="monoKey">n</tspan>%</text>
+  <text class="mono" x="616" y="614">box-shadow:    0 <tspan class="monoKey">n</tspan>px <tspan class="monoKey">n</tspan>*2px  rgba(0,0,0, …)</text>
+
+  <text class="s" x="616" y="646">Roundness is a percentage of the image's own width and</text>
+  <text class="s" x="616" y="664">height, so it scales with the picture: 50 gives a circle on a</text>
+  <text class="s" x="616" y="682">square image, and an ellipse on anything else.</text>
+
+  <text class="s" x="616" y="714">The shadow's blur and darkness are both derived from</text>
+  <text class="s" x="616" y="732">the single Shadow slider, and the darkness is capped at</text>
+  <text class="s" x="616" y="750">0.6 so it never turns into a black smudge.</text>
+
+  <text class="s" x="616" y="782">A shadow of 0 emits <tspan font-family="Consolas, Menlo, monospace">none</tspan> rather than a zero-size</text>
+  <text class="s" x="616" y="800">shadow, which keeps the browser from compositing a layer.</text>
+
+    <!-- ============ BAND 3 : RENDER ============ -->
+  <rect class="band" x="30" y="856" width="1100" height="352"/>
+  <text class="bandTitle" x="54" y="886">3 · RENDER</text>
+  <text class="bandSub" x="176" y="886">the visitor's browser does the work — the original file is untouched</text>
+
+  <rect class="box outBox" x="54" y="906" width="470" height="282"/>
+  <text class="h" x="74" y="934">One image element, one inline style</text>
+
+  <text class="mono" x="74" y="964">&lt;img src={imageUrl} style={filterStyle} /&gt;</text>
+
+  <text class="t" x="74" y="1000">The image is fetched from wherever its URL points —</text>
+  <text class="t" x="74" y="1020">a SharePoint library, a CDN, anywhere the visitor's</text>
+  <text class="t" x="74" y="1040">browser can reach. Nothing is re-hosted or cached by</text>
+  <text class="t" x="74" y="1060">the web part.</text>
+
+  <text class="t" x="74" y="1094">Every effect is computed by the GPU at paint time.</text>
+  <text class="t" x="74" y="1114">That means: no processing delay, no quality loss, and</text>
+  <text class="t" x="74" y="1134">the file on disk is byte-for-byte what it always was.</text>
+
+  <text class="s" x="74" y="1166">Set no URL and you get a dashed placeholder instead,</text>
+  <text class="s" x="74" y="1182">which is what page authors see before configuring it.</text>
+
+  <!-- visual demo -->
+  <rect class="box outBox" x="546" y="906" width="560" height="282"/>
+  <text class="h" x="566" y="934">The same source, four settings</text>
+
+  <rect x="566" y="952" width="120" height="120" rx="4" fill="url(#swatch)"/>
+  <text class="s" x="566" y="1090">original</text>
+  <text class="s" x="566" y="1106">all sliders at default</text>
+
+  <rect x="702" y="952" width="120" height="120" rx="4" fill="url(#swatch)" filter="grayscale(1)" style="filter:grayscale(1)"/>
+  <text class="s" x="702" y="1090">grayscale 100</text>
+  <text class="s" x="702" y="1106">contrast 130</text>
+
+  <rect x="838" y="952" width="120" height="120" rx="60" fill="url(#swatch)" style="filter:saturate(1.8) hue-rotate(40deg)"/>
+  <text class="s" x="838" y="1090">roundness 50 (square source)</text>
+  <text class="s" x="838" y="1106">saturation 180, hue +40</text>
+
+  <rect x="974" y="952" width="120" height="120" rx="10" fill="url(#swatch)" style="filter:sepia(0.8) brightness(1.1)" opacity="0.75"/>
+  <text class="s" x="974" y="1090">sepia 80</text>
+  <text class="s" x="974" y="1106">opacity 75, roundness 8</text>
+
+  <text class="s" x="566" y="1146">Nothing above is a saved copy — each square is the identical source with a different style attribute.</text>
+  <text class="s" x="566" y="1164">Change your mind and set the slider back; there is no "original" to restore, because it never left.</text>
+
+  <path class="edgeBlue" d="M580,430 L580,452" marker-end="url(#arrowBlue)"/>
+  <path class="edgeBlue" d="M580,834 L580,856" marker-end="url(#arrowBlue)"/>
+</svg>
