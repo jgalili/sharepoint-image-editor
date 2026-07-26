@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Image Editor",
+    "id": "dc00c2e2-2322-4fe2-b4f1-5fabcbae9622",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "jgalili",
+      "websiteUrl": "https://github.com/jgalili/sharepoint-image-editor",
+      "privacyUrl": "https://github.com/jgalili/sharepoint-image-editor",
+      "termsOfUseUrl": "https://github.com/jgalili/sharepoint-image-editor/blob/main/LICENSE",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Show an image with adjustable visual effects"
+      },
+      "longDescription": {
+        "default": "A web part that lets you apply CSS visual effects to images — brightness, contrast, saturation, hue, blur, roundness, shadow, and more. Configure in edit mode, display the styled result in view mode."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Image Editor",
+        "description": "Adds the Image Editor web part to the site.",
+        "id": "2f25d368-8199-4a71-b678-80c66af39ad2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/image-editor-webpart.sppkg"
+  }
+}
