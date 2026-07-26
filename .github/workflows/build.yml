@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Use Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      # gulp bundle runs the SPFx ESLint rig as part of the build,
+      # so a lint error fails this step.
+      - name: Bundle and package
+        run: |
+          npx gulp bundle --ship --no-color
+          npx gulp package-solution --ship --no-color
+
+      - name: Upload the .sppkg
+        uses: actions/upload-artifact@v4
+        with:
+          name: image-editor-sppkg
+          path: sharepoint/solution/*.sppkg
+          if-no-files-found: error
