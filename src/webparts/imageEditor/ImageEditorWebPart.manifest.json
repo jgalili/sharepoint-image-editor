@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "b30cdc7f-9c52-4bfd-abc2-9cc82c1770de",
+  "alias": "ImageEditorWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // This web part renders only an <img> tag with inline styles, so it does not
+  // need the "allow custom script" site setting.
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+    "group": { "default": "Advanced" },
+    "title": { "default": "Image Editor" },
+    "description": { "default": "Show an image with adjustable brightness, contrast, colour, blur, roundness and shadow." },
+    "officeFabricIconFontName": "Photo2",
+    "properties": {
+      "imageUrl": "",
+      "brightness": 100,
+      "contrast": 100,
+      "saturate": 100,
+      "hueRotate": 0,
+      "blur": 0,
+      "grayscale": 0,
+      "sepia": 0,
+      "invert": 0,
+      "opacity": 100,
+      "borderRadius": 0,
+      "shadow": 0
+    }
+  }]
+}
